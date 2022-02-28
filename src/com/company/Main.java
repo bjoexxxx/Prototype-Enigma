@@ -1,10 +1,12 @@
 package com.company;
 
 import java.util.Arrays;
+import java.util.Scanner;
 import java.util.Spliterator;
 
 public class Main {
 
+Scanner keyboard = new Scanner(System.in);
 
 
     public static void main(String[] args) {
@@ -12,23 +14,19 @@ public class Main {
         Main action = new Main();
         action.letterToNumber();
         System.out.println();
-        action.numberToLetter();
+        //action.numberToLetter();
 
 
     }
     public void letterToNumber(){
-        //pænt er det ikke men kan ikke pt. komme på en bedre metode
-        //så hvis denne kommentar er der i morgen, har dette ikke ændret sig
-        int[] number={0,1,2,3};
-        for (int i=0; i<number.length; i++){
-            if (i==1){
-                System.out.println("A");
-            } else if (i==2){
-                System.out.println("B");
-            } else if (i==3){
-                System.out.println("C");
-            } else System.out.println(" ");
-        }
+        //gået op for mig at denne nok kraver at kunne bruge codepoints
+        //dette har jeg ikke fundet ud af endnu
+            String alfabet = " ABCDEFGHIJKLMNOPQRSTRUVWXYZÆØÅ";
+            for (int i=0;i<alfabet.length();i++){
+                char c = alfabet.charAt(1);
+                System.out.println(c);
+            }
+
     }
 
     public void numberToLetter(){
